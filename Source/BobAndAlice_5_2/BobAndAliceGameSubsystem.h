@@ -22,9 +22,15 @@ public:
   UFUNCTION(BlueprintCallable,BlueprintPure)
   float GetLocalSavedTimer() const;
 
+  UFUNCTION(BlueprintCallable)
+	  void SavePackageToSubSystem(const bool PackageCollected);
+
+  UFUNCTION(BlueprintCallable, BlueprintPure)
+	  bool  GetLocalPackagedCollected() const;
+
 private:
   float LocalTimer = 45;
-
+  bool LocalPackagedCollected = false;
 
 
 };

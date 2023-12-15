@@ -16,3 +16,12 @@ float UBobAndAliceGameSubsystem::GetLocalSavedTimer() const
 {
 	return LocalTimer;
 }
+void UBobAndAliceGameSubsystem::SavePackageToSubSystem(const bool PackageCollected)
+{
+	LocalPackagedCollected = PackageCollected;
+}
+
+bool UBobAndAliceGameSubsystem::GetLocalPackagedCollected() const
+{
+	return LocalPackagedCollected;
+}
