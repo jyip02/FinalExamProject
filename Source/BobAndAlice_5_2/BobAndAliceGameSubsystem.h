@@ -16,4 +16,15 @@ public:
 
   virtual void Deinitialize() override;
 
+  UFUNCTION(BlueprintCallable)
+  void SaveTimerToSubSystem(const float TimeLimit);
+
+  UFUNCTION(BlueprintCallable,BlueprintPure)
+  float GetLocalSavedTimer() const;
+
+private:
+  float LocalTimer = 45;
+
+
+
 };

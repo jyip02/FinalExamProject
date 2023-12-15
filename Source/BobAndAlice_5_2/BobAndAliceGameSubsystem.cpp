@@ -7,4 +7,12 @@ void UBobAndAliceGameSubsystem::Initialize(
 
 void UBobAndAliceGameSubsystem::Deinitialize() { Super::Deinitialize(); }
 
+void UBobAndAliceGameSubsystem::SaveTimerToSubSystem(const float TimeLimit)
+{
+	LocalTimer = TimeLimit;
+}
 
+float UBobAndAliceGameSubsystem::GetLocalSavedTimer() const
+{
+	return LocalTimer;
+}
